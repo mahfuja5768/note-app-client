@@ -5,8 +5,8 @@ import React, { useState } from 'react';
 const Modal = ({ isOpen, onClose, children }) => {
   const modalStyles = `
     fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-    bg-[#EEF5FF] p-8 rounded-md shadow-md
-    ${isOpen ? 'block' : 'hidden'}
+    bg-[#D2E3C8] p-8 rounded-md shadow-md 
+    ${isOpen ? "block" : "hidden"}
   `;
 
   const overlayStyles = `
@@ -17,7 +17,7 @@ const Modal = ({ isOpen, onClose, children }) => {
   const closeBtnStyles = 'cursor-pointer absolute top-4 right-4';
 
   return (
-    <div>
+    <div >
       <div className={overlayStyles} onClick={onClose}></div>
       <div className={modalStyles}>
         <span className={closeBtnStyles} onClick={onClose}>

@@ -1,9 +1,12 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 import Modal from "./Modal";
 import { useForm } from "react-hook-form";
+import { postNote } from "../api/note";
+import { toast } from "react-toastify";
 
-const CreateNote = () => {
+const CreateNote = ({ refetch }) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
@@ -22,7 +25,6 @@ const CreateNote = () => {
   } = useForm();
 
   //for card colors
-  let i = 0;
   function color() {
     let randomColors = [
       "#c2ff3d",
@@ -45,24 +47,32 @@ const CreateNote = () => {
     const description = data.description;
     const bgColor = color();
     const noteAddedTime = new Date();
-    console.log(title, description, noteAddedTime, bgColor);
+    // console.log(title, description, noteAddedTime, bgColor);
     setModalOpen(false);
-    // const newTask = {
-    //   title,
-    //   description,
-    //   deadline,
-    //   priority,
-    //   status,
-    //   taskAddedTime,
-    //   email,
-    // };
 
-    // const taskPost = await postATask(newTask);
+    const newNote = {
+      title,
+      description,
+      noteAddedTime,
+      bgColor,
+    };
 
-    // console.log(taskPost);
+    const NotePost = await postNote(newNote);
 
-    //    alert('done')
-    // refetch();
+    console.log(NotePost);
+
+    toast.success("Note created successfully!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+
+    refetch();
     reset();
   };
 

@@ -1,8 +1,14 @@
-# React + Vite
+## Website name- Note App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Website live Link- https://note-app-by-muna.netlify.app/
 
-Currently, two official plugins are available:
+### Server side code link- https://github.com/mahfuja5768/note-app-server
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Technologies:
+- This project is made by React, Nodejs, Express.js, Tailwind. 
+
+### Website features:
+
+- In the home page there is a card to add new note. Clicking on the create button through modal one can add new note.
+
+- In all note cards there card information and 3 icons for  view details, edit note and remove note.

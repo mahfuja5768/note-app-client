@@ -5,7 +5,7 @@ const ErrorPage = () => {
   return (
     <div className="my-12 px-4 py-12">
       <div className="flex flex-col justify-center items-center gap-5 ">
-        <h2 className="md:text-3xl text-2xl text-red font-bold text-center text-primary">
+        <h2 className="md:text-3xl text-2xl text-white font-bold text-center ">
           Sorry, page not found!
         </h2>
         {/* <img src={gif} className="h-[400px] rounded-full" alt="" /> */}
@@ -13,7 +13,7 @@ const ErrorPage = () => {
           <Link to="/">
             {" "}
             <br />
-            <span className="md:text-3xl text-2xl text-red font-bold text-center flex underline justify-center text-green-700">
+            <span className="md:text-3xl text-2xl text-red font-bold text-center flex underline justify-center text-green-400">
               Go Home
             </span>
           </Link>
